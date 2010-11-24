@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Language:</b>
+  <%= @sentence.language %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%= @sentence.sentence %>
+</p>
+
+<table>
+  <tr>
+    <th>Language</th>
+    <th>Translation</th>
+  </tr>
+<% @sentence.links.each do |link| %>
+  <tr>
+    <td><%= link.translation.language %></td>
+    <td><%= link.translation.sentence %></td>
+  </tr>
+<% end %>
+</table>
+
+
+<%= link_to 'Edit', edit_v1_sentence_path(@sentence) %> |
+<%= link_to 'Back', v1_sentences_path %>

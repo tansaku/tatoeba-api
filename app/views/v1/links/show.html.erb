@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Sentence:</b>
+  <%= @link.sentence_id %>
+</p>
+
+<p>
+  <b>Translation:</b>
+  <%= @link.translation_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_v1_link_path(@link) %> |
+<%= link_to 'Back', v1_links_path %>

@@ -1,0 +1,25 @@
+<h1>Listing links</h1>
+
+<table>
+  <tr>
+    <th>Sentence</th>
+    <th>Translation</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @links.each do |link| %>
+  <tr>
+    <td><%= link.sentence_id %></td>
+    <td><%= link.translation_id %></td>
+    <td><%= link_to 'Show', v1_link_path(link) %></td>
+    <td><%= link_to 'Edit', edit_v1_link_path(link) %></td>
+    <td><%= link_to 'Destroy', v1_link_path(link), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Link', new_v1_link_path %>

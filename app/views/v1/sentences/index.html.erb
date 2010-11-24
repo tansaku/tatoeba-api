@@ -1,0 +1,27 @@
+<h1>Listing sentences</h1>
+
+<table>
+  <tr>
+    <th>Language</th>
+    <th>#Translations</th>
+    <th>Text</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sentences.each do |sentence| %>
+  <tr>
+    <td><%= sentence.language %></td>
+    <td><%= sentence.links.count %></td>
+    <td><%= sentence.sentence %></td>
+    <td><%= link_to 'Show', v1_sentence_path(sentence) %></td>
+    <td><%= link_to 'Edit', edit_v1_sentence_path(sentence) %></td>
+    <td><%= link_to 'Destroy', v1_sentence_path(sentence), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sentence', new_v1_sentence_path %>

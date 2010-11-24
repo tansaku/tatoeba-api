@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(:version => 20101118135233) do
 
   create_table "sentences", :force => true do |t|
     t.string   "language"
-    t.string   "sentence"
+    t.binary   "sentence"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

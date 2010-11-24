@@ -2,7 +2,7 @@ class CreateSentences < ActiveRecord::Migration
   def self.up
     create_table :sentences do |t|
       t.string :language
-      t.text :sentence
+      t.binary :sentence
 
       t.timestamps
     end
